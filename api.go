@@ -21,9 +21,9 @@ import (
 	"context"
 	"github.com/pkg/errors"
 
-	"github.com/apache/rocketmq-client-go/consumer"
-	"github.com/apache/rocketmq-client-go/primitive"
-	"github.com/apache/rocketmq-client-go/producer"
+	"github.com/swfit9/rocketmq-client-go/consumer"
+	"github.com/swfit9/rocketmq-client-go/primitive"
+	"github.com/swfit9/rocketmq-client-go/producer"
 )
 
 type Producer interface {

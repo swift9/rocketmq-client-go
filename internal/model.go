@@ -25,9 +25,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/apache/rocketmq-client-go/internal/utils"
-	"github.com/apache/rocketmq-client-go/primitive"
-	"github.com/apache/rocketmq-client-go/rlog"
+	"github.com/swfit9/rocketmq-client-go/internal/utils"
+	"github.com/swfit9/rocketmq-client-go/primitive"
+	"github.com/swfit9/rocketmq-client-go/rlog"
 )
 
 type FindBrokerResult struct {

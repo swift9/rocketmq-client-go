@@ -23,9 +23,9 @@ import (
 	"os"
 	"sync"
 
-	"github.com/apache/rocketmq-client-go"
-	"github.com/apache/rocketmq-client-go/primitive"
-	"github.com/apache/rocketmq-client-go/producer"
+	"github.com/swift9/rocketmq-client-go"
+	"github.com/swift9/rocketmq-client-go/primitive"
+	"github.com/swift9/rocketmq-client-go/producer"
 )
 
 // Package main implements a async producer to send message.

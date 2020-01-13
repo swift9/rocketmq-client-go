@@ -25,10 +25,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/apache/rocketmq-client-go/internal"
-	"github.com/apache/rocketmq-client-go/internal/utils"
-	"github.com/apache/rocketmq-client-go/primitive"
-	"github.com/apache/rocketmq-client-go/rlog"
+	"github.com/swift9/rocketmq-client-go/internal"
+	"github.com/swift9/rocketmq-client-go/internal/utils"
+	"github.com/swift9/rocketmq-client-go/primitive"
+	"github.com/swift9/rocketmq-client-go/rlog"
 )
 
 type PullConsumer interface {

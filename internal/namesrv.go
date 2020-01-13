@@ -20,9 +20,9 @@ package internal
 import (
 	"errors"
 	"fmt"
-	"github.com/apache/rocketmq-client-go/internal/remote"
-	"github.com/apache/rocketmq-client-go/primitive"
-	"github.com/apache/rocketmq-client-go/rlog"
+	"github.com/swift9/rocketmq-client-go/internal/remote"
+	"github.com/swift9/rocketmq-client-go/primitive"
+	"github.com/swift9/rocketmq-client-go/rlog"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -46,7 +46,7 @@ var (
 	ErrIllegalIP    = errors.New("IP addr error")
 )
 
-//go:generate mockgen -source namesrv.go -destination mock_namesrv.go -self_package github.com/apache/rocketmq-client-go/internal  --package internal Namesrvs
+//go:generate mockgen -source namesrv.go -destination mock_namesrv.go -self_package github.com/swift9/rocketmq-client-go/internal  --package internal Namesrvs
 type Namesrvs interface {
 	UpdateNameServerAddress(nameServerDomain, instanceName string)
 
