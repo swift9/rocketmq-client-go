@@ -1,4 +1,4 @@
-module github.com/swfit9/rocketmq-client-go
+module github.com/swift9/rocketmq-client-go
 
 require (
 	github.com/emirpasic/gods v1.12.0
