@@ -22,6 +22,7 @@ import (
 	"fmt"
 	"math"
 	"strconv"
+	"strings"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -803,6 +804,11 @@ func (pc *pushConsumer) consumeInner(ctx context.Context, subMsgs []*primitive.M
 	}
 
 	f, exist := pc.consumeFunc.Contains(subMsgs[0].Topic)
+
+	if !exist && strings.HasPrefix(subMsgs[0].Topic, "%RETRY%") {
+		f, exist = pc.consumeFunc.Contains(subMsgs[0].GetProperty("RETRY_TOPIC"))
+	}
+
 	if !exist {
 		return ConsumeRetryLater, fmt.Errorf("the consume callback missing for topic: %s", subMsgs[0].Topic)
 	}
