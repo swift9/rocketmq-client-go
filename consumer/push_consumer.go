@@ -805,6 +805,7 @@ func (pc *pushConsumer) consumeInner(ctx context.Context, subMsgs []*primitive.M
 
 	f, exist := pc.consumeFunc.Contains(subMsgs[0].Topic)
 
+	// fix lost retry message
 	if !exist && strings.HasPrefix(subMsgs[0].Topic, "%RETRY%") {
 		f, exist = pc.consumeFunc.Contains(subMsgs[0].GetProperty("RETRY_TOPIC"))
 	}
